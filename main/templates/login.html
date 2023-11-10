@@ -1,14 +1,14 @@
 {% extends 'header.html' %}
 
-{% block content %}
+{% block content%}
 <section class="login_section">
     <div class="login-container">
         <div class="detail-box">
-            <h1>Login</h1>
+            {% block h1 %} <h1>Login</h1> {% endblock %}
             <form action="#" method="post">
                 <div class="form-group">
                     <label for="email"></label>
-                    <input type="text" id="username" name="username" placeholder="Email" required>
+                    {% block input %} <input type="text" id="username" name="username" placeholder="Email" required> {% endblock %}
                 </div>
                 
                 <div class="form-group">
@@ -17,11 +17,13 @@
                 </div>
 
                 <div class="btn-box">
-                    <button type="submit">Login</button>
+                    {% block button %} <button type="submit">Login</button> {% endblock %}
                 </div>
+                <br>
+                {% block p %}<p>Don't have an account? <a href="/signup">Sign up</a> now.</p> {% endblock %}
+                {% endblock %}
             </form>
         </div>
     </div>
 </section>
 
-{% endblock %}

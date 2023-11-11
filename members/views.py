@@ -14,7 +14,7 @@ def login_user(request):
             return redirect('home')
         else: 
             messages.success(request, 'Incorrect username and password combination, please try again.')
-            return redirect('login')
+            return redirect('dashboard')
 
     else:
         return render(request, 'authentication/login.html', {})

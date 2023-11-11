@@ -82,9 +82,17 @@
               <li class="nav-item">
                 <a class="nav-link" href="/#team">Team</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'login' %}"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
-              </li>
+              <!-- Login & logout logic -->
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'logout' %}"> <i class="fa fa-user" aria-hidden="true"></i> Logout</a>
+                </li>
+              {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'login' %}"> <i class="fa fa-user" aria-hidden="true"></i> Login</a>
+                </li>
+              {% endif %}
+
               <form class="form-inline">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                   <i class="fa fa-search" aria-hidden="true"></i>

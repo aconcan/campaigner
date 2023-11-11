@@ -11,7 +11,7 @@ def login_user(request):
 
         if user:
             login(request, user)
-            return redirect('home')
+            return redirect('dashboard')
         else: 
             messages.success(request, 'Incorrect username and password combination, please try again.')
             return redirect('login')

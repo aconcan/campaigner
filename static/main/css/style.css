@@ -1016,4 +1016,18 @@ a:focus {
 .footer_section p a {
   color: inherit;
 }
+
+.alert.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+  max-width: 45%;
+}
+
+.alert-warning-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -34,5 +34,5 @@ class Campaign(models.Model):
     client_name = models.CharField(max_length=50)
     campaign_status = models.TextChoices("Campaign status", "Unsigned Signed Completed Paid")
 
-    # def __str__(self):
-    #     return self.id + ' ' + self.brand
+    def __str__(self):
+        return self.id + ' ' + self.brand

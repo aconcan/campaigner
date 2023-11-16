@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, Http404
 
 # Create your views here.
 def dashboard(request):
-    return render(request, 'dashboard.html', {})
+    if request.user.is_authenticated:    
+        return render(request, 'index.html', {})
+    else:
+        raise Http404()
